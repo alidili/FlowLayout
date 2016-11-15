@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.yang.flowlayout.FlowLayout
+    <com.yang.flowlayoutlibrary.FlowLayout
         android:id="@+id/fl_keyword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

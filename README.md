@@ -18,7 +18,7 @@ maven { url "https://jitpack.io" }
 - **在app根目录的buil.gradle文件中加入依赖**
 
 ```
-compile 'com.github.alidili:FlowLayout:v1.0'
+compile 'com.github.alidili:FlowLayout:v1.1'
 ```
 
 ![加入依赖](http://img.blog.csdn.net/20161017154348181)

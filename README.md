@@ -1,6 +1,8 @@
 # FlowLayout
 Android 流式布局FlowLayout 实现关键字标签
 
+[![](https://img.shields.io/badge/JitPack.io-v1.1-green.svg)](https://jitpack.io/#alidili/FlowLayout)
+
 ## 效果图
 
 ![FlowLayout](http://img.blog.csdn.net/20161011110254828)

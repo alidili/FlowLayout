@@ -1,7 +1,7 @@
 # FlowLayout
 Android 流式布局FlowLayout 实现关键字标签
 
-[![](https://img.shields.io/badge/JitPack.io-v1.1-green.svg)](https://jitpack.io/#alidili/FlowLayout)
+[![](https://img.shields.io/badge/JitPack.io-v1.2-green.svg)](https://jitpack.io/#alidili/FlowLayout)
 
 ## 效果图
 
@@ -20,7 +20,7 @@ maven { url "https://jitpack.io" }
 - **在app根目录的buil.gradle文件中加入依赖**
 
 ```
-compile 'com.github.alidili:FlowLayout:v1.1'
+compile 'com.github.alidili:FlowLayout:v1.2'
 ```
 
 ![加入依赖](http://img.blog.csdn.net/20161017154348181)
@@ -30,21 +30,31 @@ compile 'com.github.alidili:FlowLayout:v1.1'
 ```
 public class MainActivity extends AppCompatActivity {
 
-    private FlowLayout flKeyword;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        flKeyword = (FlowLayout) findViewById(R.id.fl_keyword);
+        FlowLayout flKeyword = findViewById(R.id.fl_keyword);
 
+        // 关键字集合
         List<String> list = new ArrayList<>();
         list.add("关键词一");
         list.add("关键词二");
         list.add("关键词三");
         list.add("关键词四");
         list.add("关键词五");
+
+        // 设置TextView水平margin
+        flKeyword.setHorizontalSpacing(15);
+        // 设置TextView垂直margin
+        flKeyword.setVerticalSpacing(15);
+        // 设置TextView水平padding
+        flKeyword.setTextPaddingH(15);
+        // 设置TextView垂直padding
+        flKeyword.setTextPaddingH(8);
+
+        // 设置UI与点击事件监听
         flKeyword.setFlowLayout(list, new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {

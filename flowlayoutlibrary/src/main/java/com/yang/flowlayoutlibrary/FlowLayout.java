@@ -21,9 +21,9 @@ import java.util.List;
 public class FlowLayout extends RelativeLayout {
 
     // 水平间距，单位为dp
-    private int horizontalSpacing = dp2px(10);
+    private int horizontalSpacing = dp2px(15);
     // 竖直间距，单位为dp
-    private int verticalSpacing = dp2px(10);
+    private int verticalSpacing = dp2px(15);
     // 行的集合
     private List<Line> lines = new ArrayList<Line>();
     // 当前的行
@@ -37,9 +37,9 @@ public class FlowLayout extends RelativeLayout {
     // 关键字背景框
     private int backgroundResource = R.drawable.bg_frame;
     // 关键字水平padding，单位为dp
-    private int textPaddingH = dp2px(7);
+    private int textPaddingH = dp2px(15);
     // 关键字竖直padding，单位为dp
-    private int textPaddingV = dp2px(4);
+    private int textPaddingV = dp2px(8);
 
     public FlowLayout(Context context) {
         this(context, null);
@@ -73,10 +73,10 @@ public class FlowLayout extends RelativeLayout {
                 backgroundResource = typedArray.getResourceId(attr, R.drawable.bg_frame);
 
             } else if (attr == R.styleable.FlowLayoutAttrs_textPaddingH) {
-                textPaddingV = typedArray.getDimensionPixelSize(attr, dp2px(7));
+                textPaddingH = typedArray.getDimensionPixelSize(attr, dp2px(7));
 
             } else if (attr == R.styleable.FlowLayoutAttrs_textPaddingV) {
-                verticalSpacing = typedArray.getDimensionPixelSize(attr, dp2px(4));
+                textPaddingV = typedArray.getDimensionPixelSize(attr, dp2px(4));
             }
         }
         typedArray.recycle();

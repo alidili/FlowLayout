@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         flKeyword.setTextPaddingH(8);
 
         // 设置UI与点击事件监听
-		// 最后调用setFlowLayout方法
+	// 最后调用setFlowLayout方法
         flKeyword.setFlowLayout(list, new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {

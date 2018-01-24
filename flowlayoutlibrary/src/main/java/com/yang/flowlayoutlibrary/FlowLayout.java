@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 关键词流式布局
+ * 文字流式布局
  * Created by yangle on 2016/10/10.
  */
 public class FlowLayout extends RelativeLayout {
 
     // 水平间距，单位为dp
     private int horizontalSpacing = dp2px(15);
-    // 竖直间距，单位为dp
+    // 垂直间距，单位为dp
     private int verticalSpacing = dp2px(15);
     // 行的集合
     private List<Line> lines = new ArrayList<Line>();
@@ -34,11 +34,11 @@ public class FlowLayout extends RelativeLayout {
     private int textSize = sp2px(15);
     // 关键字颜色
     private int textColor = Color.BLACK;
-    // 关键字背景框
+    // 关键字背景
     private int backgroundResource = R.drawable.bg_frame;
     // 关键字水平padding，单位为dp
     private int textPaddingH = dp2px(15);
-    // 关键字竖直padding，单位为dp
+    // 关键字垂直padding，单位为dp
     private int textPaddingV = dp2px(8);
 
     public FlowLayout(Context context) {
@@ -248,52 +248,104 @@ public class FlowLayout extends RelativeLayout {
             this.addView(tv, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
 
-            tv.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickListener.onItemClick(tv.getText().toString());
-                }
-            });
+            if (onItemClickListener != null) {
+                tv.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onItemClickListener.onItemClick(tv.getText().toString());
+                    }
+                });
+            }
         }
     }
 
+    /**
+     * 点击事件监听
+     */
     public interface OnItemClickListener {
         void onItemClick(String content);
     }
 
+    /**
+     * 设置文字水平间距
+     *
+     * @param horizontalSpacing 间距/dp
+     */
     public void setHorizontalSpacing(int horizontalSpacing) {
         this.horizontalSpacing = dp2px(horizontalSpacing);
     }
 
+    /**
+     * 设置文字垂直间距
+     *
+     * @param verticalSpacing 间距/dp
+     */
     public void setVerticalSpacing(int verticalSpacing) {
         this.verticalSpacing = dp2px(verticalSpacing);
     }
 
+    /**
+     * 设置文字大小
+     *
+     * @param textSize 文字大小/sp
+     */
     public void setTextSize(int textSize) {
         this.textSize = sp2px(textSize);
     }
 
+    /**
+     * 设置文字颜色
+     *
+     * @param textColor 文字颜色
+     */
     public void setTextColor(int textColor) {
         this.textColor = textColor;
     }
 
+    /**
+     * 设置文字背景
+     *
+     * @param backgroundResource 文字背景
+     */
     public void setBackgroundResource(int backgroundResource) {
         this.backgroundResource = backgroundResource;
     }
 
+    /**
+     * 设置文字水平padding
+     *
+     * @param textPaddingH padding/dp
+     */
     public void setTextPaddingH(int textPaddingH) {
         this.textPaddingH = dp2px(textPaddingH);
     }
 
+    /**
+     * 设置文字垂直padding
+     *
+     * @param textPaddingV padding/dp
+     */
     public void setTextPaddingV(int textPaddingV) {
         this.textPaddingV = dp2px(textPaddingV);
     }
 
+    /**
+     * dp转px
+     *
+     * @param dp dp值
+     * @return px值
+     */
     private int dp2px(float dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 getResources().getDisplayMetrics());
     }
 
+    /**
+     * sp转px
+     *
+     * @param sp sp值
+     * @return px值
+     */
     private int sp2px(float sp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp,
                 getResources().getDisplayMetrics());

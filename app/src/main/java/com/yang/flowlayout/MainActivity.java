@@ -1,5 +1,6 @@
 package com.yang.flowlayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -26,16 +27,25 @@ public class MainActivity extends AppCompatActivity {
         list.add("关键词四");
         list.add("关键词五");
 
-        // 设置TextView水平margin
+        // 设置文字大小
+        flKeyword.setTextSize(15);
+        // 设置文字颜色
+        flKeyword.setTextColor(Color.BLACK);
+        // 设置文字背景
+        flKeyword.setBackgroundResource(R.drawable.bg_frame);
+
+        // 设置文字水平margin
         flKeyword.setHorizontalSpacing(15);
-        // 设置TextView垂直margin
+        // 设置文字垂直margin
         flKeyword.setVerticalSpacing(15);
-        // 设置TextView水平padding
+
+        // 设置文字水平padding
         flKeyword.setTextPaddingH(15);
-        // 设置TextView垂直padding
+        // 设置文字垂直padding
         flKeyword.setTextPaddingH(8);
 
         // 设置UI与点击事件监听
+        // 最后调用setFlowLayout方法
         flKeyword.setFlowLayout(list, new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {

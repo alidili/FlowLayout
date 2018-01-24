@@ -11,7 +11,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        app:backgroundResource="@drawable/bg_frame"
+        app:horizontalSpacing="15dp"
         app:itemColor="@color/colorAccent"
-        app:itemSize="15sp" />
+        app:itemSize="15sp"
+        app:textPaddingH="15dp"
+        app:textPaddingV="8dp"
+        app:verticalSpacing="15dp" />
 
 </RelativeLayout>

@@ -1,7 +1,7 @@
 # FlowLayout
 Android 流式布局FlowLayout 实现关键字标签
 
-[![](https://img.shields.io/badge/JitPack.io-v1.2-green.svg)](https://jitpack.io/#alidili/FlowLayout)
+[![](https://img.shields.io/badge/JitPack.io-v1.4-green.svg)](https://jitpack.io/#alidili/FlowLayout)
 
 ## 效果图
 
@@ -20,7 +20,7 @@ maven { url "https://jitpack.io" }
 - **在app根目录的buil.gradle文件中加入依赖**
 
 ```
-compile 'com.github.alidili:FlowLayout:v1.2'
+compile 'com.github.alidili:FlowLayout:v1.4'
 ```
 
 ![加入依赖](http://img.blog.csdn.net/20161017154348181)

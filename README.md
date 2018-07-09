@@ -5,7 +5,7 @@ Android 流式布局FlowLayout 实现关键字标签
 
 ## 效果图
 
-![FlowLayout](http://img.blog.csdn.net/20161011110254828)
+![FlowLayout](https://upload-images.jianshu.io/upload_images/3270074-83aafecef0611ca4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/308)
 
 ## 使用方法
 
@@ -15,7 +15,7 @@ Android 流式布局FlowLayout 实现关键字标签
 maven { url "https://jitpack.io" }
 ```
 
-![jitpack](http://img.blog.csdn.net/20161017154320407)
+![jitpack](https://upload-images.jianshu.io/upload_images/3270074-b462d52412d723a8?imageMogr2/auto-orient/strip%7CimageView2/2/w/425)
 
 - **在app根目录的buil.gradle文件中加入依赖**
 
@@ -23,7 +23,7 @@ maven { url "https://jitpack.io" }
 compile 'com.github.alidili:FlowLayout:v1.4'
 ```
 
-![加入依赖](http://img.blog.csdn.net/20161017154348181)
+![加入依赖](https://upload-images.jianshu.io/upload_images/3270074-5e69850e095a952f?imageMogr2/auto-orient/strip%7CimageView2/2/w/459)
 
 - **在Activity中使用，设置点击事件**
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 ## License
 
 ```
-Copyright (C) 2017 YangLe
+Copyright (C) 2018 YangLe
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

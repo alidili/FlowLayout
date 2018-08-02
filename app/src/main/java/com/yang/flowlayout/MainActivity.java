@@ -10,6 +10,13 @@ import com.yang.flowlayoutlibrary.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 主页
+ * <p>
+ * Created by yangle on 2016/10/10.
+ * Website：http://www.yangle.tech
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         flKeyword.setTextPaddingH(8);
 
         // 设置UI与点击事件监听
-        // 最后调用setFlowLayout方法
+        // 最后调用setViews方法
         flKeyword.setViews(list, new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {

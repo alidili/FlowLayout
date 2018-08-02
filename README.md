@@ -20,7 +20,7 @@ maven { url "https://jitpack.io" }
 - **在app根目录的buil.gradle文件中加入依赖**
 
 ```
-compile 'com.github.alidili:FlowLayout:v1.4'
+compile 'com.github.alidili:FlowLayout:v1.5'
 ```
 
 ![加入依赖](https://upload-images.jianshu.io/upload_images/3270074-5e69850e095a952f?imageMogr2/auto-orient/strip%7CimageView2/2/w/459)
@@ -63,8 +63,16 @@ public class MainActivity extends AppCompatActivity {
         flKeyword.setTextPaddingH(8);
 
         // 设置UI与点击事件监听
-	// 最后调用setFlowLayout方法
-        flKeyword.setFlowLayout(list, new FlowLayout.OnItemClickListener() {
+        // 最后调用setViews方法
+        flKeyword.setViews(list, new FlowLayout.OnItemClickListener() {
+            @Override
+            public void onItemClick(String content) {
+                Toast.makeText(MainActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // 增加关键字
+        flKeyword.addView("关键字六", new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {
                 Toast.makeText(MainActivity.this, content, Toast.LENGTH_SHORT).show();

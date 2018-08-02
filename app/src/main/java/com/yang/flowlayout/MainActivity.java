@@ -46,7 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
         // 设置UI与点击事件监听
         // 最后调用setFlowLayout方法
-        flKeyword.setFlowLayout(list, new FlowLayout.OnItemClickListener() {
+        flKeyword.setViews(list, new FlowLayout.OnItemClickListener() {
+            @Override
+            public void onItemClick(String content) {
+                Toast.makeText(MainActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // 增加关键字
+        flKeyword.addView("关键字六", new FlowLayout.OnItemClickListener() {
             @Override
             public void onItemClick(String content) {
                 Toast.makeText(MainActivity.this, content, Toast.LENGTH_SHORT).show();

@@ -232,7 +232,60 @@ public class FlowLayout extends RelativeLayout {
         }
     }
 
+    /**
+     * 设置关键字标签
+     *
+     * @param list                关键字
+     * @param onItemClickListener 点击监听
+     */
+    @Deprecated
     public void setFlowLayout(List<String> list, final OnItemClickListener onItemClickListener) {
+        removeAllViews();
+        addViews(list, onItemClickListener);
+    }
+
+    /**
+     * 设置关键字标签
+     *
+     * @param str                 关键字
+     * @param onItemClickListener 点击监听
+     */
+    public void setView(String str, final OnItemClickListener onItemClickListener) {
+        List<String> list = new ArrayList<>();
+        list.add(str);
+        setViews(list, onItemClickListener);
+    }
+
+    /**
+     * 设置关键字标签
+     *
+     * @param list                关键字
+     * @param onItemClickListener 点击监听
+     */
+    public void setViews(List<String> list, final OnItemClickListener onItemClickListener) {
+        removeAllViews();
+        addViews(list, onItemClickListener);
+    }
+
+    /**
+     * 增加关键字标签
+     *
+     * @param str                 关键字
+     * @param onItemClickListener 点击监听
+     */
+    public void addView(String str, final OnItemClickListener onItemClickListener) {
+        List<String> list = new ArrayList<>();
+        list.add(str);
+        addViews(list, onItemClickListener);
+    }
+
+    /**
+     * 增加关键字标签
+     *
+     * @param list                关键字
+     * @param onItemClickListener 点击监听
+     */
+    public void addViews(List<String> list, final OnItemClickListener onItemClickListener) {
         for (int i = 0; i < list.size(); i++) {
             final TextView tv = new TextView(getContext());
 
@@ -245,7 +298,7 @@ public class FlowLayout extends RelativeLayout {
 
             tv.setClickable(true);
             tv.setBackgroundResource(backgroundResource);
-            this.addView(tv, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+            addView(tv, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
 
             if (onItemClickListener != null) {
